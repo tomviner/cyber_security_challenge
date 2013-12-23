@@ -1,9 +1,7 @@
-from unittest import TestCase
-
 from morse import encode, decode
 
 
-class TestSOS(TestCase):
+class TestSOS(object):
     morse_sos = '... --- ...'
 
     def test_sos_decode(self):
@@ -13,7 +11,7 @@ class TestSOS(TestCase):
         assert encode('SOS') == self.morse_sos
 
 
-class TestWords(TestCase):
+class TestWords(object):
     morse_12_23 = '.---- ..---  ...-- ....-'
 
     def test_words_encode(self):
