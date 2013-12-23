@@ -1,5 +1,6 @@
 import re
 
+
 # From http://svn.python.org/projects/stackless/trunk/Demo/scripts/morse.py
 CHAR_TO_MORSE = {
     "'": '.----.', '(': '-.--.-', ')': '-.--.-', ',': '--..--',
@@ -45,18 +46,3 @@ def encode(s):
     Words are joined by a double space
     """
     return '  '.join(encode_to_words(s))
-
-
-# tests
-
-morse_sos = '... --- ...'
-def test_sos_decode():
-    assert decode(morse_sos) == 'SOS'
-def test_sos_encode():
-    assert encode('SOS') == morse_sos
-
-morse_12_23 = '.---- ..---  ...-- ....-'
-def test_words_encode():
-    assert encode('12 34') == morse_12_23
-def test_words_decode():
-    assert decode(morse_12_23) == '12 34'
