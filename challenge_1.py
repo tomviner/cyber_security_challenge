@@ -1,7 +1,7 @@
 from morse import decode
 
 
-# See challange_1.png
+# See challenge_1.png
 # (r)ed, (g)reen notes
 cyphertext = """
 
